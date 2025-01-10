@@ -1,0 +1,15 @@
+// ordre des imports : -reset -vendors -pages -themes -layout -components
+
+// base
+@use "scss/base/reset";
+@use "scss/base/animation";
+
+// pages
+@use "scss/pages/galaxy";
+
+// components
+@use "scss/components/planet";
+@use "scss/components/sun";
+@use "scss/components/satellite";
+@use "scss/components/star";
+

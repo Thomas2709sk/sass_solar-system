@@ -1,0 +1,6 @@
+@use "../abstracts/all" as abstracts;
+
+.sun{
+    $background: "../assets/images/sun.svg";
+    @include abstracts.circle(abstracts.$sun-size, $background);
+}

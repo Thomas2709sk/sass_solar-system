@@ -1,0 +1,15 @@
+// taille de la terre 100px
+// mercure 2.6 plus petite
+
+// taille planètes
+$earth-size: 100px;
+$mercury-size: calc($earth-size / 2.6);
+$venus-size: calc($earth-size / 1.1);
+$sun-size: calc($earth-size *2);
+$mars-size: calc($earth-size / 1.9);
+$jupiter-size: calc( $earth-size * 2);
+$saturn-size: calc( $earth-size * 1.8);
+$uranus-size: calc( $earth-size * 1.5);
+$neptune-size: calc( $earth-size * 1.3);
+$satellite-size: 16px;
+$gap-between-planets: 20px;

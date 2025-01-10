@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes animation-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.galaxy {
+  background-color: black;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.galaxy__planets-containers {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+  padding-left: 100px;
+  position: relative;
+  z-index: 1;
+  overflow: scroll;
+}
+.galaxy__stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.planet {
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  background-image: url(grey);
+  flex-shrink: 0;
+}
+.planet--mercury {
+  border-radius: 100%;
+  width: 38.4615384615px;
+  height: 38.4615384615px;
+  background-image: url("../assets/images/mercury.svg");
+  flex-shrink: 0;
+}
+.planet--venus {
+  border-radius: 100%;
+  width: 90.9090909091px;
+  height: 90.9090909091px;
+  background-image: url("../assets/images/venus.svg");
+  flex-shrink: 0;
+}
+.planet--earth {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  background-image: url("../assets/images/earth.svg");
+  flex-shrink: 0;
+}
+.planet--mars {
+  border-radius: 100%;
+  width: 52.6315789474px;
+  height: 52.6315789474px;
+  background-image: url("../assets/images/mars.svg");
+  flex-shrink: 0;
+}
+.planet--jupiter {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  background-image: url("../assets/images/jupiter.svg");
+  flex-shrink: 0;
+}
+.planet--saturn {
+  border-radius: 100%;
+  width: 180px;
+  height: 180px;
+  background-image: url("../assets/images/saturn.svg");
+  flex-shrink: 0;
+  border-radius: 0;
+}
+.planet--uranus {
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  background-image: url("../assets/images/uranus.svg");
+  flex-shrink: 0;
+  border-radius: 0;
+}
+.planet--neptune {
+  border-radius: 100%;
+  width: 130px;
+  height: 130px;
+  background-image: url("../assets/images/neptune.svg");
+  flex-shrink: 0;
+}
+.planet--mercury {
+  transform-origin: -120px 19.2307692308px;
+  animation: animation-rotate 10s linear infinite;
+}
+.planet--venus {
+  transform-origin: -178.4615384615px 45.4545454545px;
+  animation: animation-rotate 15s linear infinite;
+}
+.planet--earth {
+  position: relative;
+}
+.planet--mars {
+  border-radius: 100%;
+  width: 52.6315789474px;
+  height: 52.6315789474px;
+  background-image: url("../assets/images/mars.svg");
+  flex-shrink: 0;
+  position: relative;
+}
+
+@keyframes animation-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.sun {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  background-image: url("../assets/images/sun.svg");
+  flex-shrink: 0;
+}
+
+.satellite, .satellite--deimos, .satellite--phobos, .satellite--moon {
+  background-color: red;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% -50%;
+  color: white;
+}
+.satellite--moon {
+  background-color: grey;
+  transform-origin: 50% calc(50% + 50px);
+  animation: animation-rotate 5s linear infinite;
+}
+.satellite--phobos {
+  background-color: white;
+  transform-origin: 50% calc(50% + 26.3157894737px);
+  animation: animation-rotate 5s linear infinite;
+}
+.satellite--deimos {
+  background-color: orange;
+  transform-origin: 50% calc(50% + 26.3157894737px);
+  animation: animation-rotate 2s linear infinite;
+}
+
+.star {
+  width: 40px;
+  height: 40px;
+}
+.star:nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  rotate: 274deg;
+  filter: blur(10px);
+}
+.star:nth-child(2) {
+  position: absolute;
+  top: 81%;
+  left: 25%;
+  rotate: 164deg;
+  filter: blur(7px);
+}
+.star:nth-child(3) {
+  position: absolute;
+  top: 88%;
+  left: 54%;
+  rotate: 175deg;
+  filter: blur(10px);
+}
+.star:nth-child(4) {
+  position: absolute;
+  top: 10%;
+  left: 64%;
+  rotate: 311deg;
+  filter: blur(10px);
+}
+.star:nth-child(5) {
+  position: absolute;
+  top: 26%;
+  left: 65%;
+  rotate: 146deg;
+  filter: blur(2px);
+}
+.star:nth-child(6) {
+  position: absolute;
+  top: 30%;
+  left: 95%;
+  rotate: 70deg;
+  filter: blur(5px);
+}
+.star:nth-child(7) {
+  position: absolute;
+  top: 8%;
+  left: 79%;
+  rotate: 244deg;
+  filter: blur(1px);
+}
+.star:nth-child(8) {
+  position: absolute;
+  top: 97%;
+  left: 15%;
+  rotate: 239deg;
+  filter: blur(2px);
+}
+.star:nth-child(9) {
+  position: absolute;
+  top: 74%;
+  left: 39%;
+  rotate: 19deg;
+  filter: blur(7px);
+}
+.star:nth-child(10) {
+  position: absolute;
+  top: 30%;
+  left: 38%;
+  rotate: 177deg;
+  filter: blur(6px);
+}
+.star:nth-child(11) {
+  position: absolute;
+  top: 76%;
+  left: 98%;
+  rotate: 133deg;
+  filter: blur(9px);
+}
+.star:nth-child(12) {
+  position: absolute;
+  top: 95%;
+  left: 26%;
+  rotate: 325deg;
+  filter: blur(10px);
+}
+.star:nth-child(13) {
+  position: absolute;
+  top: 13%;
+  left: 24%;
+  rotate: 197deg;
+  filter: blur(3px);
+}
+.star:nth-child(14) {
+  position: absolute;
+  top: 36%;
+  left: 86%;
+  rotate: 157deg;
+  filter: blur(1px);
+}
+.star:nth-child(15) {
+  position: absolute;
+  top: 55%;
+  left: 13%;
+  rotate: 192deg;
+  filter: blur(6px);
+}
+.star:nth-child(16) {
+  position: absolute;
+  top: 18%;
+  left: 88%;
+  rotate: 298deg;
+  filter: blur(3px);
+}
+.star:nth-child(17) {
+  position: absolute;
+  top: 92%;
+  left: 16%;
+  rotate: 129deg;
+  filter: blur(5px);
+}
+.star:nth-child(18) {
+  position: absolute;
+  top: 58%;
+  left: 34%;
+  rotate: 182deg;
+  filter: blur(10px);
+}
+.star:nth-child(19) {
+  position: absolute;
+  top: 41%;
+  left: 36%;
+  rotate: 59deg;
+  filter: blur(9px);
+}
+.star:nth-child(20) {
+  position: absolute;
+  top: 60%;
+  left: 1%;
+  rotate: 223deg;
+  filter: blur(3px);
+}
+.star:nth-child(21) {
+  position: absolute;
+  top: 74%;
+  left: 13%;
+  rotate: 304deg;
+  filter: blur(5px);
+}
+.star:nth-child(22) {
+  position: absolute;
+  top: 35%;
+  left: 60%;
+  rotate: 13deg;
+  filter: blur(1px);
+}
+.star:nth-child(23) {
+  position: absolute;
+  top: 59%;
+  left: 52%;
+  rotate: 103deg;
+  filter: blur(6px);
+}
+.star:nth-child(24) {
+  position: absolute;
+  top: 76%;
+  left: 16%;
+  rotate: 36deg;
+  filter: blur(9px);
+}
+.star:nth-child(25) {
+  position: absolute;
+  top: 94%;
+  left: 62%;
+  rotate: 18deg;
+  filter: blur(6px);
+}/*# sourceMappingURL=main.css.map */
